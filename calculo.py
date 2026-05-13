@@ -1,22 +1,16 @@
-def calculate(num1, num2):
-    """
-    Returns product if product <= 1000, otherwise returns sum
-    """
-    product = num1 * num2
-    if product <= 1000:
-        return product
+def calcular(num1, num2):
+    producto = num1 * num2
+    if producto <= 1000:
+        return producto
     else:
         return num1 + num2
 
-# Test cases
-print("Case 1:")
-number1 = 20
-number2 = 30
-result = calculate(number1, number2)
-print(f"The result is {result}")
-
-print("\nCase 2:")
-number1 = 40
-number2 = 30
-result = calculate(number1, number2)
-print(f"The result is {result}")
+# Pedir los números al usuario
+try:
+    numero1 = int(input("Ingrese el primer número: "))
+    numero2 = int(input("Ingrese el segundo número: "))
+    
+    resultado = calcular(numero1, numero2)
+    print(f"El resultado es {resultado}")
+except ValueError:
+    print("Error: Debe ingresar números válidos")
